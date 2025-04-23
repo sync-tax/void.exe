@@ -1,4 +1,4 @@
-"_- void.exe ~ by TRIBΞHOLZ -_'
+"_- TRACK#1 ~ [Chaotic Algorithms] by TRIBΞHOLZ -_'
 _-_-__--_-_--__-_--__-___--_-_--_--_-_-_-__-."
 #---------------------------------------------------------
 #PRESETS
@@ -24,8 +24,8 @@ s = {
   bass: "#{s_path}/bass.wav",
   tz: "#{s_path}/tz.wav",
   snare: "#{s_path}/snare.wav",
-  tsch: "#{sAll_path}/percs/perc (21).wav", #perc 21, 47!!, 22, 31(DÜSTER!!) hats19
-  lead: "#{s_path}/lead.wav",
+  tsch: "#{s_path}/perc.wav", #perc 21, 47!!, 22, 31(DÜSTER!!) hats19
+  piep: "#{s_path}/piep.wav",
   atmo_loop:  "#{s_path}/atmo_loop.wav",
   vocal:  "#{s_path}/void2.wav",
 }
@@ -145,7 +145,7 @@ end
 live_loop :piep, sync: :metro do
   with_fx :reverb, mix: 0.5, room: 0.75 do
     with_fx :slicer, phase: $midi_values[30] do
-      sample s[:lead],
+      sample s[:piep],
         amp: $midi_values[31],
         beat_stretch: 2,
         rpitch: ring(8, 3, -8, -3).tick
